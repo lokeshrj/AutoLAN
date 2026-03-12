@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func updateIcon(ethernetActive: Bool) {
-        let name = ethernetActive ? "antenna.radiowaves.left.and.right.slash" : "wifi"
+        let name = ethernetActive ? "cable.connector" : "antenna.radiowaves.left.and.right"
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: name, accessibilityDescription: "AutoLAN")
         }
