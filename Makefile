@@ -16,6 +16,8 @@ build:
 		-framework Network \
 		-framework CoreWLAN \
 		-framework ServiceManagement
+	mkdir -p $(CONTENTS)/Resources
+	cp Resources/AppIcon.icns $(CONTENTS)/Resources/AppIcon.icns
 	cp Info.plist $(CONTENTS)/Info.plist
 	codesign --force --sign - $(APP_BUNDLE)
 	@echo "Built $(APP_BUNDLE)"
